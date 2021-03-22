@@ -1,0 +1,611 @@
+$Orange: #FCAC45
+$Black: #111111
+$White: #FFFFFF
+$Title: 44px
+$Lato: 'Lato', sans-serif
+$Sans: 'Open Sans', sans-serif
+
+
+
+body
+    font-family: $Sans
+    font-size: 14px
+    padding: 0
+    margin: 0
+
+a
+    text-decoration: none
+
+.container
+    max-width: 1200px
+    margin-left: auto
+    margin-right: auto
+
+.AboutUs__inner
+    display: flex
+    padding: 105px 0
+    gap: 50px
+
+.header
+    background: #222222
+    &-top
+        display: flex
+        flex-direction:row
+        flex-wrap:wrap
+        align-items:center 
+        margin:  auto
+        padding-top: 37px 
+        justify-content: space-between
+        text-transform: uppercase
+        .logo
+            display: flex
+            align-self: center
+            color: $White  
+            font-size: 24px
+        &-menu
+            display: flex   
+            padding: 0
+            margin: 0
+            font-size: 16px
+            &-item
+                list-style: none
+                margin:  15px             
+                a   
+                    display: flex
+                    color: $White
+                    font-size: 18px
+                    text-decoration: none
+                    position: relative
+                    transition: all 0.6s
+                    &:before 
+                        content: ""
+                        width: 0
+                        height: 0.1em
+                        position: absolute
+                        bottom: -0.3em
+                        left: 100%
+                        background: $Orange
+                        transition: all 0.3s
+                    &:hover 
+                        &:before 
+                            width: 100%
+                            left: 0
+                            background: $Orange          
+    &-middle
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        justify-content: center
+        text-align: center
+        font-size: $Title
+        margin-top: 270px
+        text-transform: uppercase
+        &-Title
+            color: #747474
+            letter-spacing: 3px
+        &-OrangeTitle
+            color: $Orange
+            font-family: $Lato
+            font-weight: bold
+        &-description
+            color: #747474
+            font-size: 20px
+            letter-spacing: 2px       
+            padding-bottom: 330px
+            text-transform: none
+            &-white
+                color: $White
+                font-weight: 600
+    &-bottom
+        display: flex
+        justify-content: center
+        padding-bottom: 200px
+        &-DownArrow
+            border: 1px solid #fff
+            padding: 15px
+            border-radius: 30px
+            &:hover
+                background-color: $Orange
+                cursor: pointer
+                opacity: 80%
+            
+
+.AboutUs
+    display: flex
+    .container
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+    &-RightContainer
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        text-transform: uppercase
+        &-FirstTitle
+            display: flex
+            font-size: 20px
+            font-weight: 100
+        &-SecondTitle
+            font-size: 34px
+            font-weight: 100
+            &-Bold
+                font-family: $Lato
+                font-weight: bold
+        &-OrangeLine
+            width: 90px
+            margin: 10px 0 31px 0
+            background-color: $Orange
+            height: 2px
+            border: none
+        &-Description
+            display: block
+            font-size: 14px 
+            width: 400px
+            font-weight: 300
+            text-transform: none
+            letter-spacing: 0.8px
+        &-Advantages
+            margin: 34px 0 0 0px
+            padding: 0 0 49px 0
+            text-transform: none
+            &-items::before
+                content: url(../img/li.png)
+                margin-right: 10px
+            &-items
+                list-style-type: none
+                margin: 10px 0
+                &-Bold
+                    font-family: $Lato
+                    font-weight: 900
+                    font-size: 16px
+                &-italic
+                    font-style: italic 
+                    letter-spacing: 1px
+        &-link:hover
+                background-color: $Orange
+                transition: background 0.4s
+                color: $Orange
+
+        &-link:not(:hover)
+                background-color: none
+                transition: background 0.4s
+        &-link
+            border: 1px solid $Black
+            border-radius: 5px
+            width: 163px
+            display: flex
+            justify-content: center
+            padding: 10px 20px
+            &-img
+                display: flex
+                padding-right: 10px
+                width: 15px
+                height: 15px
+                align-self: center
+            &-Text
+                display: flex
+                list-style: none
+                color: $Black
+
+.MeetOurTeam
+    background-color: $Black
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    &-Title
+        color: $White
+        margin-top: 100px
+        margin-bottom: 15px
+        font-size: $Title
+        text-transform: uppercase
+    &-BigTitle
+        font-family: $Lato
+        font-weight: 400
+    &-line1
+        width: 125px
+        height: 3px
+        background-color: $Orange
+        border: none
+    &-line2
+        width: 85px
+        height: 2px
+        background-color: $Orange
+        border: none
+.Team-slide
+    width: 220px
+    margin-top: 50px
+    display: flex
+    flex-direction: row
+    color: $White
+.slide
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
+        padding-bottom: 170px
+    &-Team
+        text-align: center
+        &-photo
+            width: 150px
+            height: 150px
+            flex-shrink: 0
+            border-radius: 50%
+            overflow: hidden
+            font-size: 20px
+            font-family: 'Gotham Pro Light'
+            position: relative
+        &-name
+            margin-top: 20px
+            margin-bottom: 2px
+            letter-spacing: 1px
+            font-weight: bold
+            font-family: $Lato
+            font-size: 18px
+    &-descr
+        width: 220px
+        
+.Team-slide
+    justify-content: space-around
+.swiper-container
+    max-width: 980px
+.swiper-pagination
+    position: relative
+    padding-bottom: 90px
+    &-bullet
+        border-radius: 0
+        background: #bb7404
+        margin: 50px 10px 0 10px
+        :root
+            background-color: $Orange
+.OurServices
+    display: flex
+    flex-direction: column
+    background-color: $White
+    &-Title
+        margin-top: 100px
+        text-align: center
+        text-transform: uppercase
+        font-size: $Title
+        &-Big
+            font-family: $Lato
+            font-weight: bold
+    &-line1
+        margin-bottom: 8px
+        width: 125px
+        height: 3px
+        background-color: $Orange
+        border: none
+    &-line2
+        margin-top: 0
+        width: 85px
+        height: 2px
+        background-color: $Orange
+        border: none
+    &-description
+        display: flex
+        justify-content: center
+        text-align: center
+        margin: 0 90px
+        color: #6C6C6C
+        font-size: 16px
+        font-style: italic
+.Services
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    margin: 55px 30px 100px
+    flex-wrap: wrap
+    &-Service
+        display: flex
+        flex-direction: column
+        width: 250px
+        margin: 0 10px
+        text-align: center
+        &-image
+            border: 5px solid $Orange
+            padding: 20px
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            width: 50px
+            height: 50px
+            margin: 20px auto
+        &-image-photo
+            width: 50px
+            height: 50px
+    &-Title
+        display: flex
+        text-transform: uppercase
+        justify-content: center
+        text-align: center
+        font-weight: bold
+        margin: 10px auto
+        font-family: $Lato
+        font-weight: bold
+        font-size: 26px
+.OurClients
+    background-color: $Black
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    &-Title
+        display: flex
+        justify-content: center
+        text-transform: uppercase
+        font-size: $Title
+        color: $White
+        margin-top: 100px
+        &-Big
+            font-family: $Lato
+            font-weight: bold
+    &-line1
+        margin-bottom: 8px
+        width: 125px
+        height: 3px
+        background-color: $Orange
+        border: none
+    &-line2
+        width: 85px
+        height: 2px
+        background-color: $Orange
+        border: none
+.Clients-slider
+    margin-top: 100px
+.Client-Slide
+    display: flex
+    justify-content: space-around
+.client-pagination
+    margin: 100px 0 0 0
+    display: flex
+    justify-content: center
+    padding-bottom: 100px
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+    margin: 0 10px
+
+.OurWork
+    display: block
+    background-color: $White
+    margin-top: 100px
+    text-transform: uppercase
+    text-align: center
+    &-Title
+        font-size: $Title
+        &-Big
+            font-family: $Lato
+            font-weight: bold
+    &-line1
+        margin-bottom: 8px
+        width: 125px
+        height: 3px
+        background-color: $Orange
+        border: none
+    &-line2
+        width: 85px
+        height: 2px
+        background-color: $Orange
+        border: none
+    &-description
+        color: #6C6C6C
+        font-style: italic
+        display: block
+        margin-top: 50px
+        font-size: 16px
+.TeamWorks
+    &-header
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 90px
+        &-Title
+            display: flex
+            flex-direction: row
+            text-transform: uppercase
+            font-size: 18px
+            font-weight: bold
+        &-menu
+            text-transform: none
+            &-All
+                border-right: 1px solid $Black
+                padding: 0 10px
+                text-transform: none
+                &:hover
+                    cursor: pointer
+                    text-decoration: underline
+            &-WebDesign
+                border-right: 1px solid $Black
+                padding: 0 10px
+                &:hover
+                    cursor: pointer
+                    text-decoration: underline
+            &-MobileDesign
+                border-right: 1px solid $Black
+                padding: 0 10px
+                &:hover
+                    cursor: pointer
+                    text-decoration: underline
+            &-Photograpy
+                padding: 0 10px
+                &:hover
+                    cursor: pointer
+                    text-decoration: underline
+.Portfolio
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-bottom: 80px
+.Photo_Work, .Mobile_Work, .Web_Work
+    width: 266px
+    height: 239px
+    margin-top: 30px
+
+.Testimonials
+    background-color: $Black
+    padding: 100px 0 100px 0
+    &-Title
+        display: flex
+        justify-content: center
+        color: $White
+        font-size: $Title
+        text-transform: uppercase
+        &-Big
+            font-weight: bold
+    &-line1
+        width: 125px
+        height: 3px
+        background-color: $Orange
+        border: none
+    &-line2
+        width: 85px
+        height: 2px
+        background-color: $Orange
+        border: none
+
+.review
+    display: block
+    text-align: center
+    color: $White
+    font-size: 18px
+    &-author
+        display: block
+        text-align: center
+        color: #747474
+        margin-top: 80px
+        font-size: 16px
+
+.Review-slider
+    margin-top: 100px
+    margin-bottom: 100px
+.review-pagination
+    margin: 50px 0 0 0
+    display: flex
+    justify-content: center
+    padding-bottom: 30px
+.Contact
+    background-color: $White
+    &-Title
+        display: block
+        text-align: center
+        margin-top: 100px
+        text-transform: uppercase
+        font-size: $Title
+        &-Big
+            font-weight: bold
+            font-family: $Lato
+    &-line1
+        width: 125px
+        height: 3px
+        background-color: $Orange
+        border: none
+    &-line2
+        width: 85px
+        height: 2px
+        background-color: $Orange
+        border: none
+    &-description
+        display: flex
+        margin: 0 auto
+        text-align: center
+        width: 750px
+        margin-top: 50px
+        font-style: italic
+        color: #747474
+        font-size: 16px
+.Contact-Form
+    display: flex
+    flex-direction: row
+    justify-content: center
+    margin-top: 75px
+    &-Data
+        display: flex
+        flex-direction: row
+        justify-content: center
+        &-Name, &-Email
+            display: flex
+            flex-direction: column
+            flex-wrap: nowrap
+            margin: 0 30px
+            &-Input
+                width: 330px
+                height: 30px
+                outline: none
+                margin-top: 7px
+        &-Message
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            margin: 30px 30px 0 30px
+            &-Input
+                resize: vertical
+                margin-top: 7px 
+        &-Button
+            display: flex
+            justify-content: flex-end
+            margin: 10px 30px 0 30px
+            &-Submit
+                background-color: $Orange
+                outline: none
+                border: none
+                padding: 8px 60px
+                color: $White
+                text-transform: uppercase
+                font-size: 18px
+                margin-bottom: 100px
+.footer
+    background: $Black
+    color: #B2B2B2
+    display: flex
+    &-icons
+        padding: 30px 0
+        &-icon
+            padding: 0 5px
+
+@media screen and ( max-width:  1200px)
+    .header-top
+        margin: 0 10px
+        .logo
+            font-size: 40px
+    .header-middle-Title
+        font-size: 50px
+    .header-middle-description
+        font-size: 30px
+    .AboutUs__inner
+        flex-direction: column
+    .AboutUs-RightContainer-Description
+        width: auto
+    .AboutUs-LeftContainer
+        display: none
+    .AboutUs-RightContainer
+        margin: 0 30px
+    .AboutUs-RightContainer-FirstTitle
+        font-size: 30px
+    .AboutUs-RightContainer-link
+        font-size: 35px
+        padding: 30px 20px
+        width: auto
+    .slide-Team-name
+        font-size: 25px
+    .slide-Team-
+        font-size: 20px
+    .slide-descr
+        margin-top: 5px
+        font-size: 20px
+    .Services-Service 
+        width: 400px
+        font-size: 30px
+    .TeamWorks
+        margin: 0 30px
+        font-size: 30px
+    .TeamWorks-header-Title
+        font-size: 30px
+    .Portfolio
+        margin: 0 30px
+    .review
+        margin: 0 30px
+        font-size: 30px
+    .review-author
+        font-size: 25px
+    form
+        font-size: 30px
