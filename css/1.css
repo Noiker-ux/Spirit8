@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -938,6 +942,11 @@ a {
   margin-bottom: 100px;
 }
 
+.Contact-Form-Data-Button-Submit:hover {
+  cursor: pointer;
+  background-color: #ce8b10;
+}
+
 .footer {
   background: #111111;
   color: #B2B2B2;
@@ -952,6 +961,11 @@ a {
 
 .footer-icons-icon {
   padding: 0 5px;
+}
+
+.footer-icons-icon:hover {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 @media screen and (max-width: 1200px) {
